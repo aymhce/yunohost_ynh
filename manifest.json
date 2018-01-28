@@ -1,0 +1,36 @@
+{
+    "name": "Yunohost",
+    "id": "yunohost",
+    "url": "https://yunohost.org/",
+    "packaging_format": 1,
+    "description": {
+        "en": "Get Yunohost in Yunohost, crazy :)",
+        "fr": "Lancer Yunohost dans Yunohost, c&#39;est fou :)"
+    },
+    "version": "1.0",
+    "license": "AGPL-3.0",
+    "maintainer": {
+        "name": "aymhce",
+        "email": "aymhce@gmail.com"
+    },
+    "requirements": {
+        "yunohost": ">= 2.7.2"
+    },
+    "services": [
+        "nginx"
+     ],
+    "multi_instance": true,
+    "arguments": {
+        "install" : [
+            {
+                "name": "domain",
+                "type": "domain",
+                "ask": {
+                    "en": "Choose a domain for Yunohost",
+                    "fr": "Choisissez un domaine pour Yunohost"
+                },
+                "example": "app.domain.org"
+            }
+        ]
+    }
+}

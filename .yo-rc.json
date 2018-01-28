@@ -1,0 +1,18 @@
+{
+  "generator-dockerapp-yunohost": {
+    "beautifulName": "Yunohost",
+    "defaultPathOption": "",
+    "forceSecureAccess": false,
+    "secureAccessOption": false,
+    "adminUserOption": false,
+    "enDescription": "Get Yunohost in Yunohost, crazy :)",
+    "frDescription": "Lancer Yunohost dans Yunohost, c'est fou :)",
+    "urlApp": "https://yunohost.org/",
+    "urlDockerHub": "https://hub.docker.com/r/domainelibre/yunohost2/",
+    "authorName": "aymhce",
+    "authorEmail": "aymhce@gmail.com",
+    "idName": "yunohost",
+    "reverseProxyProtocol": "https",
+    "scriptsLoadSave": true
+  }
+}
