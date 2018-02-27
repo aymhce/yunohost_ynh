@@ -75,7 +75,7 @@ dockerapp_ynh_loadvariables () {
         export domain=$domain
 	export data_path=/home/yunohost.docker/$app
 	export port=$(ynh_app_setting_get $app port)
-	[ "$port" == "" ] && port=0
+	[ "$port" == "" ] && port=$(ynh_find_port 31000) && ynh_app_setting_set $app port $port
 	path_url=/
 	export architecture=$(dpkg --print-architecture)
 	export incontainer=$(dockerapp_ynh_incontainer)
@@ -113,11 +113,6 @@ dockerapp_ynh_save () {
         bash docker/save.sh
 }
 
-# get port from docker
-dockerapp_ynh_getandsaveport () {
-        export port=$(docker port "$app" | awk -F':' '{print $NF}')
-        ynh_app_setting_set $app port $port
-}
 
 # Modify Nginx configuration file and copy it to Nginx conf directory
 dockerapp_ynh_preparenginx () {
