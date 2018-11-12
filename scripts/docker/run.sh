@@ -1,8 +1,8 @@
 #!/bin/bash
 
-[ "$architecture" == "amd64" ] && image=domainelibre/yunohost2:2.7.9-1
-[ "$architecture" == "i386" ]  && image=domainelibre/yunohost2-i386:2.7.9-1
-[ "$architecture" == "armhf" ] && image=domainelibre/yunohost2-arm:2.7.9-1
+[ "$architecture" == "amd64" ] && image=domainelibre/yunohost3:3.2.2-1
+[ "$architecture" == "i386" ]  && image=domainelibre/yunohost3-i386:3.2.2-1
+[ "$architecture" == "armhf" ] && image=domainelibre/yunohost3-arm:3.2.2-1
 [ -z $image ] && ynh_die "Sorry, your $architecture architecture is not supported ..."
 
 options="-p $port:443 -v $data_path/data:/home/yunohost.backup -v /var/run/docker.sock:/var/run/docker.sock"
